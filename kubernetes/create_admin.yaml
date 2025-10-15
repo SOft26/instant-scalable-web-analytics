@@ -1,0 +1,23 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: plausible-create-admin
+  namespace: plausible
+spec:
+  template:
+    spec:
+      containers:
+      - name: create-admin
+        image: plausible/analytics:latest
+        imagePullPolicy: Always
+        envFrom:
+        - secretRef:
+            name: plausible-secret
+        command: ["/bin/sh", "-c"]
+        args:
+          - |
+            echo "Creating Plausible admin user...";
+            /app/bin/plausible eval "Application.ensure_all_started(:plausible); Plausible.Auth.create_user(\"mediatrixufondu@gmail.com\", \"Verizon6000$\", true)";
+            echo "Done!";
+      restartPolicy: Never
+

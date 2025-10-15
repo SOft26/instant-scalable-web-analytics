@@ -1,0 +1,38 @@
+# CONFIG MAP SECTION
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: plausible-config
+  namespace: plausible
+data:
+  # Adjust BASE_URL if you use NodePort/Ingress later
+  BASE_URL: "http://analyzr.pro"
+  DISABLE_REGISTRATION: "true"
+---
+# MIGRATE_DEPLOY SECTION
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: plausible-migrate
+  namespace: plausible   # change if you're not using "plausible"
+spec:
+  backoffLimit: 0
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: migrate
+          image: plausible/analytics:latest
+          imagePullPolicy: IfNotPresent
+          envFrom:
+            - secretRef:
+                name: plausible-secret
+          command: ["sh", "-c"]
+          args:
+            - |
+              echo "===> Running Plausible database migrations..."
+              /entrypoint.sh db createdb &&
+              /entrypoint.sh db migrate
+              echo "===> Migration finished successfully."
+

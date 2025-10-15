@@ -1,0 +1,28 @@
+# === Terraform ===
+*.tfstate
+*.tfstate.*
+crash.log
+override.tf
+override.tf.json
+*.tfvars
+*.tfvars.json
+.terraform/
+.terraform.lock.hcl
+
+# Local environment files
+.env
+*.log
+
+# === Kubernetes ===
+# Ignore temporary or generated YAMLs
+*.tmp.yaml
+*.bak
+*.swp
+
+# === OS Files ===
+.DS_Store
+Thumbs.db
+
+# === VSCode ===
+.vscode/
+
