@@ -17,7 +17,7 @@ spec:
         args:
           - |
             echo "Creating Plausible admin user...";
-            /app/bin/plausible eval "Application.ensure_all_started(:plausible); Plausible.Auth.create_user(\"mediatrixufondu@gmail.com\", \"Verizon6000$\", true)";
+            /app/bin/plausible eval "Application.ensure_all_started(:plausible); Plausible.Auth.create_user(\"your email\", \"yourpass\", true)";
             echo "Done!";
       restartPolicy: Never
 
