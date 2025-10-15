@@ -18,7 +18,10 @@ override.tf.json
 *.tmp.yaml
 *.bak
 *.swp
-
+create-admin.yaml
+plausible-secret.yaml
+deployment.yaml
+service.yaml
 # === OS Files ===
 .DS_Store
 Thumbs.db
