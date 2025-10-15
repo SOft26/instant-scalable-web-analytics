@@ -253,7 +253,7 @@ MIT License — see [LICENSE](LICENSE) for details.
 
 ---
 
-## 🧰 Tech Stack
+##  Tech Stack
 
 | Tool | Purpose |
 |------|----------|
@@ -266,7 +266,7 @@ MIT License — see [LICENSE](LICENSE) for details.
 
 ---
 
-## ✨ Results & Observations
+##  Results & Observations
 
 - Successfully deployed **Plausible Analytics** on AWS EKS with full automation.  
 - Verified **secure ingress**, **load balancing**, and **database connectivity**.  
@@ -274,7 +274,7 @@ MIT License — see [LICENSE](LICENSE) for details.
 
 ---
 
-## 🌍 Future Improvements
+##  Future Improvements
 
 - CI/CD with GitHub Actions or ArgoCD  
 - Horizontal Pod Autoscaling  
@@ -283,7 +283,7 @@ MIT License — see [LICENSE](LICENSE) for details.
 
 ---
 
-## 👤 Author & Contact
+##  Author & Contact
 
 **Chinelo Ufondu**  
 Cloud / Infrastructure Engineer | DevOps Enthusiast  
