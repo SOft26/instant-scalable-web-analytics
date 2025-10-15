@@ -1,19 +1,19 @@
-# 🚀 Plausible Analytics on AWS EKS
+#  Plausible Analytics on AWS EKS
 
 This project demonstrates how to deploy **Plausible Analytics**, an open-source web analytics tool, on **Amazon Elastic Kubernetes Service (EKS)** using **Terraform** and **Kubernetes manifests**.  
-It automates the entire setup — from infrastructure provisioning to HTTPS-secured access and observability — showing how to run a production-grade analytics application in the cloud.
+It automates the entire setup - from infrastructure provisioning to HTTPS-secured access and observability - showing how to run a production-grade analytics application in the cloud.
 
 ---
 
-## 💡 Why I Built This Project
+##  Why I Built This Project
 Startups and agencies often rely on costly analytics platforms like Google Analytics 360 or Datadog for real-time insights.  
-This project provides a **cost-efficient, privacy-friendly, and fully self-hosted alternative** — deployable in minutes using Terraform and AWS EKS.  
+This project provides a **cost-efficient, privacy-friendly, and fully self-hosted alternative** - deployable in minutes using Terraform and AWS EKS.  
 It demonstrates skills in **cloud automation, Kubernetes orchestration, and secure production architecture.**
 
 
 ---
 
-## 📘 Project Overview
+##  Project Overview
 
 This setup automates:
 - Creation of a secure AWS EKS cluster using Terraform  
@@ -25,7 +25,7 @@ This setup automates:
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ### Components
 - **Terraform** → Provisions AWS infrastructure (VPC, EKS, IAM roles, networking).  
@@ -44,7 +44,7 @@ This setup automates:
 
 ---
 
-## 📦 Prerequisites
+##  Prerequisites
 
 Make sure you have:
 - Terraform ≥ v1.9  
@@ -58,7 +58,7 @@ Make sure you have:
 
 ---
 
-## ⚙️ Terraform Setup
+##  Terraform Setup
 
 ```bash
 terraform init
@@ -80,7 +80,7 @@ kubectl get nodes
 
 ---
 
-## 🚀 Kubernetes Deployment
+##  Kubernetes Deployment
 
 ### 1. Create Namespace
 ```bash
@@ -128,7 +128,7 @@ kubectl apply -f plausible.yaml
 
 ---
 
-## 🌐 Networking (Route 53 + ALB + ACM)
+##  Networking (Route 53 + ALB + ACM)
 
 1. Create ACM certificate for your domain  
 2. Add Route 53 A-record pointing to your ALB  
@@ -165,7 +165,7 @@ spec:
 
 ---
 
-## 🔐 Network Policy Setup
+##  Network Policy Setup
 
 Restrict service-to-service communication.
 
@@ -192,7 +192,7 @@ spec:
 
 ---
 
-## 🔑 Create Admin User
+##  Create Admin User
 
 ```yaml
 apiVersion: batch/v1
@@ -225,7 +225,7 @@ kubectl logs -n plausible job/plausible-create-admin -f
 
 ---
 
-## 🧩 Verification
+##  Verification
 
 ```bash
 kubectl get pods -n plausible
@@ -234,11 +234,11 @@ kubectl get ingress plausible-ingress -n plausible
 ```
 
 Access your deployment:  
-👉 [https://analyzr.pro](https://analyzr.pro)
+[https://analyzr.pro](https://analyzr.pro)
 
 ---
 
-## 🧠 Best Practices
+##  Best Practices
 
 - Enable autoscaling and monitoring with **Prometheus + Grafana**  
 - Use **AWS Secrets Manager** for credentials  
@@ -248,7 +248,7 @@ Access your deployment:
 
 ---
 
-## 🧾 License
+##  License
 MIT License — see [LICENSE](LICENSE) for details.
 
 ---
