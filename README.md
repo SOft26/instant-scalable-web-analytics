@@ -34,16 +34,16 @@ This setup automates:
 - **Route 53** → Maps domain (`analyzr.pro`) to ALB.  
 - **Kubernetes Secrets** → Stores credentials and environment variables securely.
 
-![WebAnalytics_Architecture](https://github.com/user-attachments/assets/decadffb-cf9a-4af7-91cc-82ef9c9da223)
-
-
 ### Logical Flow
 1. User accesses `https://analyzr.pro`  
 2. Route 53 resolves domain → ALB endpoint  
 3. ALB routes traffic to the Plausible Service in Kubernetes  
 4. Service forwards requests to the Plausible Pod (port 8000)  
 5. Application connects internally to PostgreSQL and ClickHouse  
-6. Responses are returned to the client via ALB  
+6. Responses are returned to the client via ALB
+
+![WebAnalytics_Architecture](https://github.com/user-attachments/assets/9827e7d9-5679-446e-a22e-402257d26440)
+![Network_Architecture](https://github.com/user-attachments/assets/db15055c-b006-4452-b37e-09da8b4b5f93)
 
 ---
 
