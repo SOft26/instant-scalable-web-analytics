@@ -32,7 +32,10 @@ This setup automates:
 - **Kubernetes** → Manages deployment and service routing.  
 - **AWS ALB Ingress Controller** → Handles external traffic routing.  
 - **Route 53** → Maps domain (`analyzr.pro`) to ALB.  
-- **Kubernetes Secrets** → Stores credentials and environment variables securely.  
+- **Kubernetes Secrets** → Stores credentials and environment variables securely.
+
+![WebAnalytics_Architecture](https://github.com/user-attachments/assets/decadffb-cf9a-4af7-91cc-82ef9c9da223)
+
 
 ### Logical Flow
 1. User accesses `https://analyzr.pro`  
