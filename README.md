@@ -31,11 +31,11 @@ This setup automates:
 - **Terraform** → Provisions AWS infrastructure (VPC, EKS, IAM roles, networking).  
 - **Kubernetes** → Manages deployment and service routing.  
 - **AWS ALB Ingress Controller** → Handles external traffic routing.  
-- **Route 53** → Maps domain (`analyzr.pro`) to ALB.  
+- **Route 53** → Maps domain (`app.analyzr.pro`) to ALB.  
 - **Kubernetes Secrets** → Stores credentials and environment variables securely.
 
 ### Logical Flow
-1. User accesses `https://analyzr.pro`  
+1. User accesses `https://app.analyzr.pro`  
 2. Route 53 resolves domain → ALB endpoint  
 3. ALB routes traffic to the Plausible Service in Kubernetes  
 4. Service forwards requests to the Plausible Pod (port 8000)  
@@ -110,7 +110,7 @@ stringData:
   CLICKHOUSE_DB: dbname
   CLICKHOUSE_HOST: clickhouse
   SECRET_KEY_BASE: "your_secret_key"
-  BASE_URL: "https://analyzr.pro"
+  BASE_URL: "https://app.analyzr.pro"
   DATABASE_URL: "postgresql://username:pass@postgres.plausible.svc.cluster.local:5432/dbname"
   CLICKHOUSE_DATABASE_URL: "http://username:pass@clickhouse.plausible.svc.cluster.local:8123/dbname"
 ```
