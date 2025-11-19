@@ -34,6 +34,10 @@ This setup automates:
 - **Route 53** → Maps domain (`app.analyzr.pro`) to ALB.  
 - **Kubernetes Secrets** → Stores credentials and environment variables securely.
 
+  <img width="1920" height="1080" alt="Screenshot (349)" src="https://github.com/user-attachments/assets/cd0b236a-490b-4e76-82c5-53614aa81162" />
+  <img width="1920" height="1080" alt="Screenshot (350)" src="https://github.com/user-attachments/assets/2be45b1d-c570-47e7-9960-5fa364214848" />
+
+
 ### Logical Flow
 1. User accesses `https://app.analyzr.pro`  
 2. Route 53 resolves domain → ALB endpoint  
